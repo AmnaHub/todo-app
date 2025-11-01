@@ -1,0 +1,85 @@
+.app-container {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.app-container.light-mode {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.app-container.dark-mode {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.todo-item {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.todo-item.completed {
+  opacity: 0.8;
+}
+
+.todo-text {
+  word-break: break-word;
+  padding: 8px 0;
+}
+
+.btn-group .btn {
+  margin-left: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .todo-item {
+    padding: 1rem !important;
+  }
+  
+  .btn-group {
+    display: flex;
+  }
+  
+  .btn-group .btn {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Dark mode support */
+.dark-mode .card {
+  background-color: #2d3748;
+  color: white;
+}
+
+.dark-mode .form-control {
+  background-color: #4a5568;
+  border-color: #718096;
+  color: white;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #a0aec0;
+}
+
+.dark-mode .todo-item {
+  background-color: #4a5568 !important;
+  color: white;
+}
+
+.dark-mode .bg-light {
+  background-color: #718096 !important;
+}
